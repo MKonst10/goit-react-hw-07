@@ -21,8 +21,8 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      {loading && <p>Request in progress...</p>}
-      {error && <p>An error {error} occured</p>}
+      {loading && <p style={{ color: "white" }}>Request in progress...</p>}
+      {error && <p style={{ color: "white" }}>An error {error} occured</p>}
       <ContactList />
     </div>
   );
