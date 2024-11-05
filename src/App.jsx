@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectError, selectLoading } from "./redux/selectors.js";
 import { useEffect } from "react";
 import { fetchContacts } from "./redux/contactsOps.js";
+import Loader from "./components/Loader/Loader.jsx";
 
 function App() {
   const error = useSelector(selectError);
@@ -21,7 +22,7 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      {loading && <p style={{ color: "white" }}>Request in progress...</p>}
+      {loading && <Loader />}
       {error && <p style={{ color: "white" }}>An error {error} occured</p>}
       <ContactList />
     </div>
